@@ -1,0 +1,52 @@
+@font-face {
+  font-family: "Plus Jakarta Sans";
+  font-style: normal;
+  font-weight: 200 700;
+  font-display: swap;
+  src: url("/assets/fonts/PlusJakartaSans.woff2") format("woff2");
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0.12 0.01 255;
+    --foreground: 0.96 0.005 255;
+    --card: 0.15 0.012 255;
+    --card-foreground: 0.96 0.005 255;
+    --popover: 0.15 0.012 255;
+    --popover-foreground: 0.96 0.005 255;
+    --primary: 0.52 0.22 265;
+    --primary-foreground: 0.98 0.002 255;
+    --secondary: 0.21 0.015 255;
+    --secondary-foreground: 0.96 0.005 255;
+    --muted: 0.21 0.015 255;
+    --muted-foreground: 0.68 0.015 255;
+    --accent: 0.21 0.015 255;
+    --accent-foreground: 0.96 0.005 255;
+    --destructive: 0.55 0.22 25;
+    --destructive-foreground: 0.98 0.002 255;
+    --border: 0.21 0.015 255;
+    --input: 0.21 0.015 255;
+    --ring: 0.52 0.22 265;
+    --radius: 0.75rem;
+
+    /* Brand orange */
+    --brand: 0.62 0.22 32;
+    /* Indigo accent */
+    --indigo: 0.52 0.22 265;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground font-sans;
+    background-color: oklch(var(--background));
+    color: oklch(var(--foreground));
+  }
+}
